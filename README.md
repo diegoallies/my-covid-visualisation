@@ -1,34 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# COVID-19 Data Visualization Project
 
-First, run the development server:
+This project was built as part of the TopicWorx Assessment. It is a Next.js application (using TypeScript) that visualizes COVID‑19 data with an interactive line chart. The chart displays both the total confirmed cases and daily confirmed cases over time.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies and Libraries](#technologies-and-libraries)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [How It Works](#how-it-works)
+  - [Components](#components)
+    - [Header](#header)
+    - [CovidChart](#covidchart)
+    - [Footer](#footer)
+- [Development Approach and Steps](#development-approach-and-steps)
+- [Usage](#usage)
+- [Future Enhancements](#future-enhancements)
+- [License](#license)
+
+## Overview
+
+This web application is designed to programmatically visualize supplied COVID‑19 data using a line chart. It reads data from a JSON file, parses it, and displays both the total and daily confirmed cases over time. The application is built using Next.js (v13.4.4) with TypeScript, ensuring type safety and high code quality. The interactive chart is rendered using `react-chartjs-2` and `chart.js`.
+
+## Features
+
+- **Responsive Design:** Clean, modern UI that adjusts across devices.
+- **Interactive Chart:** Visualizes total and daily confirmed COVID‑19 cases.
+- **Modular Architecture:** Separated components for header, chart, and footer.
+- **Type Safety:** Uses TypeScript with defined interfaces for data.
+- **Encapsulated Styling:** All CSS modules are organized in a dedicated folder.
+
+## Technologies and Libraries
+
+- **Next.js 13.4.4**: Framework for building React applications.
+- **TypeScript**: Enhances code reliability with static type-checking.
+- **React**: Library for building interactive user interfaces.
+- **react-chartjs-2 (v5.2.0)**: React wrapper for Chart.js.
+- **Chart.js (v4.4.0)**: Library for creating dynamic charts.
+- **CSS Modules**: Scoped CSS for each component.
+
+## Project Structure
+
+```
+my-covid-visualisation/
+├── src/
+│   ├── app/
+│   │   └── page.tsx
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── CovidChart.tsx
+│   ├── data/
+│   │   └── covid.json
+│   ├── styles/
+│   │   ├── page.module.css
+│   │   ├── Header.module.css
+│   │   ├── Footer.module.css
+│   │   └── CovidChart.module.css
+│   └── types/
+│       └── CovidData.ts
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository or download the source code.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Development Approach and Steps
 
-## Learn More
+1. **Project Initialization**
+2. **Data Integration**
+3. **Component Creation**
+4. **Chart Implementation**
+5. **Layout and Assembly**
+6. **Testing and Refinement**
 
-To learn more about Next.js, take a look at the following resources:
+## Future Enhancements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Data Filtering
+- Additional Chart Types
+- UI/UX Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is part of the TopicWorx Assessment and is intended for educational purposes only.

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import covidData from '@/data/covid.json';
@@ -12,19 +14,18 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import styles from './CovidChart.module.css';
+import styles from '@/styles/CovidChart.module.css';
 
-// Register required Chart.js components
+// Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-// Utility function to parse numbers (handles strings with space separators)
+// Utility function to parse values (handles strings with space separators)
 function parseValue(value: string | number): number {
   if (typeof value === 'number') return value;
   return parseInt(value.replace(/\s/g, ''), 10);
 }
 
 const CovidChart: React.FC = () => {
-  // Type the imported JSON data as CovidData array
   const dataArray: CovidData[] = covidData;
   const dates = dataArray.map(item => item.Date);
   const totalConfirmed = dataArray.map(item => parseValue(item['Total Confirmed Cases']));

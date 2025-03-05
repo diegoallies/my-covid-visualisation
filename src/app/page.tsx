@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CovidChart from '@/components/CovidChart';
-import styles from './page.module.css';
+import styles from '@/styles/page.module.css';
 
 const Home: React.FC = () => {
   return (
