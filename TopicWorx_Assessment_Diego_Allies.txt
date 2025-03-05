@@ -1,0 +1,86 @@
+
+# COVID-19 Data Visualization Project
+
+This document serves as the submission for the TopicWorx Assessment. The project is a COVID-19 data visualization web application built using Next.js (TypeScript), showcasing interactive charts of the supplied data.
+
+## Submission Information
+- **Candidate Name:** Diego Allies
+- **Date:** March 2025
+- **Assessment Title:** TopicWorx Assessment 1
+- **Project Type:** COVID-19 Data Visualization
+
+## Project Overview
+
+The application visualizes the COVID-19 dataset in an interactive line chart, displaying both **Total Confirmed Cases** and **Daily Confirmed Cases** over time. The application was built using **Next.js 13.4.4** with TypeScript to ensure code quality, scalability, and maintainability.
+
+## Technologies Used
+
+| Technology           | Version      | Purpose                   |
+|-------------------|------------|--------------------------|
+| Next.js           | 13.4.4    | Framework for building React applications |
+| React             | 18.2.0    | Component-based frontend library |
+| TypeScript        | 5.x       | Static type checking |
+| react-chartjs-2    | 5.2.0     | Chart library for React |
+| Chart.js          | 4.4.0     | Data visualization |
+| CSS Modules       | -         | Component-specific styling |
+
+## How the Project Works
+
+The application follows a **modular component-based architecture** where each component is responsible for a specific task:
+
+1. **Header Component:** Displays the company name **TopicWorx**.
+2. **CovidChart Component:** Fetches, parses, and visualizes the COVID-19 data using **Chart.js**.
+3. **Footer Component:** Displays the developer's name, **Diego Allies**, along with a copyright notice.
+
+The app leverages **TypeScript interfaces** to define the expected structure of the JSON data, ensuring type safety across components.
+
+## Folder Structure
+
+```
+src/
+├── app/
+│   └── page.tsx           // Main Page Component
+├── components/
+│   ├── Header.tsx         // Header Component
+│   ├── Footer.tsx         // Footer Component
+│   └── CovidChart.tsx     // Chart Component (Client-Side)
+├── data/
+│   └── covid.json         // COVID-19 Data
+├── styles/
+│   ├── Header.module.css
+│   ├── Footer.module.css
+│   └── CovidChart.module.css
+└── types/
+    └── CovidData.ts       // TypeScript Interfaces
+```
+
+## Development Approach
+
+1. **Project Initialization:** Created the Next.js project with TypeScript configuration.
+2. **Data Parsing:** Implemented a function to sanitize numbers in the JSON data (removing spaces).
+3. **Chart Visualization:** Used **react-chartjs-2** to render a responsive line chart.
+4. **Styling:** Applied component-scoped **CSS Modules**.
+5. **Testing:** Ensured the app is responsive across devices.
+
+## How to Run the Project
+
+1. Clone the repository or download the source code.
+2. Install dependencies using:
+   ```bash
+   npm install --legacy-peer-deps
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open the app at [http://localhost:3000](http://localhost:3000).
+
+## Conclusion
+
+This project demonstrates the ability to **programmatically visualize data** using modern frontend technologies. The design follows clean code principles, emphasizing **modularity, reusability, and type safety**.
+
+---
+
+**Developed by Diego Allies**  
+March 2025  
+TopicWorx Assessment
